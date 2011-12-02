@@ -3,3 +3,7 @@ bin
 *.userprefs
 *.pidb
 TestHarness
+*.suo
+_Resharper*
+obj
+*.user
