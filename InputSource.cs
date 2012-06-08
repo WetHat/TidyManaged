@@ -31,11 +31,14 @@ namespace TidyManaged
 		internal InputSource(Stream stream)
 		{
 			this.stream = stream;
+			//previously, code spent 16% of its time calling this repeatedly in EOF
+			_streamLength = stream.Length;
 			this.TidyInputSource = new Interop.TidyInputSource(new Interop.TidyGetByteFunc(OnGetByte), new Interop.TidyUngetByteFunc(OnUngetByte), new Interop.TidyEOFFunc(OnEOF));
 		}
 
 		Stream stream;
 		internal Interop.TidyInputSource TidyInputSource;
+		private long _streamLength;
 
 		byte OnGetByte(IntPtr sinkData)
 		{
@@ -49,7 +52,7 @@ namespace TidyManaged
 
 		bool OnEOF(IntPtr sinkData)
 		{
-			return (this.stream.Position >= this.stream.Length);
+			return (this.stream.Position >= _streamLength);
 		}
 	}
 }
