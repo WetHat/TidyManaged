@@ -79,6 +79,12 @@ namespace TidyManaged.Interop
 		[DllImport("libtidy.dll")]
 		internal static extern int tidySetErrorSink(IntPtr tdoc, ref TidyOutputSink sink);
 
+        [DllImport("libtidy.dll")]
+        internal static extern int tidyErrorCount(IntPtr tdoc);
+
+        [DllImport("libtidy.dll")]
+        internal static extern int tidyWarningCount(IntPtr tdoc);
+
 		internal static string tidyOptGetValueString(IntPtr tdoc, TidyOptionId optId)
 		{
 			return Marshal.PtrToStringAnsi(tidyOptGetValue(tdoc, optId));

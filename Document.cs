@@ -1048,6 +1048,16 @@ namespace TidyManaged
 			if (fromString) this.OutputCharacterEncoding = tempEnc;
 		}
 
+        public int ErrorCount()
+        {
+            return PInvoke.tidyErrorCount(this.handle);
+        }
+
+        public int WarningCount()
+        {
+            return PInvoke.tidyWarningCount(this.handle);
+        }
+
 		#endregion
 
 		#region Static Methods
