@@ -2,13 +2,19 @@
 
 This is a managed .NET/Mono wrapper for the open source, cross-platform Tidy library, a HTML/XHTML/XML markup parser & cleaner originally created by Dave Raggett.
 
-I'm not going to explain Tidy's "raison d'être" - please read [Dave Raggett's original web page](http://www.w3.org/People/Raggett/tidy/) for more information, or the [SourceForge project](http://tidy.sourceforge.net/) that has taken over maintenance of the library.
+I'm not going to explain Tidy's "raison d'être" - please read [Dave Raggett's original web page](http://www.w3.org/People/Raggett/tidy/)
+for more information, or the [GitHub project](https://github.com/htacg/tidy-html5) that has taken over maintenance of the library.
 
 ## libtidy
 
 This wrapper is written in C#, and makes use of .NET platform invoke (p/invoke) functionality to interoperate with the Tidy library "libtidy" (written in portable ANSI C).
 
-Therefore, you'll also need a build of the binary appropriate for your platform. If you're after a 32 or 64 bit Windows build, or you want a more recent build for Mac OS X than the one that is bundled with the OS, visit the [downloads page](http://github.com/markbeaton/TidyManaged/downloads) at GitHub. Otherwise, grab the latest source from the [SourceForge project](http://tidy.sourceforge.net/), and roll your own.
+Therefore, you'll also need a build of the binary appropriate for your platform.
+
+A version of the 32 bit library is bundled with this project. 
+
+If you're after a 64 bit Windows build, or you want a more recent build,
+grab the latest source from the [GitHub project](https://github.com/htacg/tidy-html5/releases), and roll your own.
 
 ## Sample Usage
 
