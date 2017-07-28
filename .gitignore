@@ -7,3 +7,4 @@ TestHarness
 _Resharper*
 obj
 *.user
+.vs
