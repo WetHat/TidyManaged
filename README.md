@@ -11,7 +11,7 @@ This wrapper is written in C#, and makes use of .NET platform invoke (p/invoke) 
 
 Therefore, you'll also need a build of the binary appropriate for your platform.
 
-A version of the 32 bit library is bundled with this project. 
+Version 5.4.0 of the 32 bit library is bundled with this project for convenience. 
 
 If you're after a 64 bit Windows build, or you want a more recent build,
 grab the latest source from the [GitHub project](https://github.com/htacg/tidy-html5/releases), and roll your own.
